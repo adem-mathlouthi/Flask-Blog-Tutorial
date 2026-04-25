@@ -4,7 +4,7 @@ from os import path
 from flask_login import LoginManager
 import os
 from dotenv import load_dotenv
-from prometheus_flask_exporter import PrometheusMetrics
+from prometheus_flask_exporter import PrometheusMetrics # noqa: F401
 
 load_dotenv()
 
