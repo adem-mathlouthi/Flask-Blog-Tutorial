@@ -4,7 +4,7 @@ from os import path
 from flask_login import LoginManager
 import os
 from dotenv import load_dotenv
-from prometheus_flask_exporter import PrometheusMetrics # noqa: F401
+from prometheus_flask_exporter import PrometheusMetrics  # noqa: F401
 
 load_dotenv()
 
@@ -35,8 +35,12 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
+
     PrometheusMetrics(app)
+
     return app
+
+
 def create_database(app):
     if not path.exists("website/" + DB_NAME):
         with app.app_context():
