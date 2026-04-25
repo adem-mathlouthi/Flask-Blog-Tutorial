@@ -4,6 +4,7 @@ from os import path
 from flask_login import LoginManager
 import os
 from dotenv import load_dotenv
+from prometheus_flask_exporter import PrometheusMetrics
 
 load_dotenv()
 
@@ -34,6 +35,8 @@ def create_app():
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
+    metrics = PrometheusMetrics(app)
+
 
     return app
 
