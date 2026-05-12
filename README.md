@@ -4,6 +4,7 @@ Projet réalisé dans le cadre du module DevOps.
 On a pris une application Flask existante (Flask-Blog-Tutorial de TechWithTim)
 et on a mis en place toute une chaîne DevOps dessus.
 
+lien public: https://psychic-waffle-jjpj766rw7v7cpp99-5000.app.github.dev/login?next=%2F
 
 ## C'est quoi ce projet ?
 
